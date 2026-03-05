@@ -93,13 +93,39 @@ import {
   File01Icon,
   LogoutIcon,
 } from "@hugeicons/core-free-icons";
+import { ChartExample } from "./example-chart";
+import { OtpExample } from "./otp-example";
+import { DatePickerWithRange } from "./date-picker-example";
+import { TableExample } from "./table-example";
 
 export function ComponentExample() {
   return (
-    <ExampleWrapper>
-      <CardExample />
-      <FormExample />
-    </ExampleWrapper>
+    <>
+      <div className="max-w-7xl mx-auto pt-8 pb-6 w-full px-4">
+        <h1 className="text-brand font-bold text-3xl">Components Examples</h1>
+      </div>
+
+      <ExampleWrapper>
+        <CardExample />
+        <FormExample />
+
+        <Example title="Chart">
+          <ChartExample />
+        </Example>
+
+        <Example title="Table">
+          <TableExample />
+        </Example>
+
+        <Example title="Date range picker">
+          <DatePickerWithRange />
+        </Example>
+
+        <Example title="OTP">
+          <OtpExample />
+        </Example>
+      </ExampleWrapper>
+    </>
   );
 }
 
@@ -115,9 +141,7 @@ function CardExample() {
           className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale"
         />
         <CardHeader>
-          <CardTitle className="text-brand">
-            Observability Plus is replacing Monitoring
-          </CardTitle>
+          <CardTitle>Observability Plus is replacing Monitoring</CardTitle>
 
           <CardDescription>
             Switch to the improved way to explore your data, with natural
